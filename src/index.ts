@@ -1,3 +1,5 @@
+import { Message } from "discord.js";
+
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./config.json");
@@ -8,7 +10,7 @@ client.on("ready", () => {
   client.user.setActivity("discord.gg/fvgzRYjHET");
 });
 
-client.on("message", (msg) => {
+client.on("message", (msg: Message) => {
   let canais = ["838590966821683241"];
   let palavras = ["!whitelist", "!mensagem 1", "!mensagem 2"];
   if (
